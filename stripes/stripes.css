@@ -1,0 +1,87 @@
+.container {
+    background: repeating-linear-gradient(
+    45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+)
+}
+
+.grey-stripes {
+    background: 
+        /* On "top" */
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            #ccc 10px,
+            #ccc 20px
+        ),
+        /* on "bottom" */
+        linear-gradient(
+            to bottom,
+            #eee,
+            #999
+        );
+}
+
+.supported-stripes {
+    background: linear-gradient(
+        to bottom,
+        #5d9634,
+        #5d9634 50%,
+        #538c2b 50%,
+        #538c2b
+        );
+        /* The rectangle in which to repeat. 
+        It can be fully wide in this case */
+    background-size: 100% 20px;
+}
+
+/* This next part is how to make a progress bar */
+
+div {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .progress {
+    background: repeating-linear-gradient(-45deg, #666, #666 25%, #5c5c5c 25%, #5c5c5c 50%, #666 50%) top left fixed;
+    background-size: 30px 30px;
+  }
+  .progress .current {
+    width: 25%;
+    -webkit-animation: width 5s infinite;
+    animation: width 5s infinite;
+    background: repeating-linear-gradient(-45deg, #465298, #465298 25%, #3f4a89 25%, #3f4a89 50%, #465298 50%) top left fixed;
+    background-size: 30px 30px;
+  }
+  
+  .progress-funky {
+    background: repeating-linear-gradient(-45deg, #666, #666 10px, #5c5c5c 10px, #5c5c5c 20px, #666 20px) top left;
+  }
+  .progress-funky .current {
+    width: 25%;
+    -webkit-animation: width 5s infinite;
+            animation: width 5s infinite;
+    background: repeating-linear-gradient(-45deg, #465298, #465298 10px, #3f4a89 10px, #3f4a89 20px, #465298 20px) top left;
+  }
+  
+  @-webkit-keyframes width {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes width {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
