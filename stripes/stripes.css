@@ -26,6 +26,20 @@
         );
 }
 
+.small-supported-stripes {
+  max-height: 4px;
+  background: linear-gradient(
+        to bottom,
+        #4c5546,
+        #4c5546 50%,
+        #696e65 50%,
+        #696e65
+        );
+        /* The rectangle in which to repeat. 
+        It can be fully wide in this case */
+    background-size: 100% 20px;
+}
+
 .supported-stripes {
     background: linear-gradient(
         to bottom,
